@@ -21,7 +21,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-
 public class DeviceTypeControllerTest {
 
     private static DeviceType deviceType = DeviceTypeFactory.createDeviceType("Printer", 5, "black");

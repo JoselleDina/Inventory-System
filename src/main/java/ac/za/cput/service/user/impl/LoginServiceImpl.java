@@ -1,6 +1,5 @@
 package ac.za.cput.service.user.impl;
 
-import ac.za.cput.entity.equipment.Device;
 import ac.za.cput.entity.user.Login;
 import ac.za.cput.repository.user.LoginRepository;
 import ac.za.cput.repository.user.impl.LoginRepositoryImpl;
@@ -51,9 +50,8 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    public Device delete(String loginId) {
+    public void delete(String loginId) {
         repository.delete(loginId);
 
-        return null;
     }
 }

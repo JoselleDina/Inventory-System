@@ -1,6 +1,5 @@
 package ac.za.cput.service.generic.impl;
 
-import ac.za.cput.entity.equipment.Device;
 import ac.za.cput.entity.generic.Stock;
 import ac.za.cput.repository.generic.StockRepository;
 import ac.za.cput.repository.generic.impl.StockRepositoryImpl;
@@ -48,8 +47,7 @@ public class StockServiceImpl implements StockService {
     }
 
     @Override
-    public Device delete(String s) {
+    public void delete(String s) {
         this.repository.delete(s);
-        return null;
     }
 }

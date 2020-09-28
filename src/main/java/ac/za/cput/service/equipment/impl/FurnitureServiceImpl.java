@@ -1,15 +1,12 @@
 package ac.za.cput.service.equipment.impl;
 
-import ac.za.cput.entity.equipment.Device;
 import ac.za.cput.entity.equipment.Furniture;
 import ac.za.cput.repository.equipment.FurnitureRepository;
 import ac.za.cput.repository.equipment.Impl.FurnitureRepositoryImpl;
 import ac.za.cput.service.equipment.FurnitureService;
-import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
 public class FurnitureServiceImpl implements FurnitureService
 {
     private static FurnitureService service = null;
@@ -47,8 +44,9 @@ public class FurnitureServiceImpl implements FurnitureService
     }
 
     @Override
-    public void delete(String s) {
+    public void delete(String furniture) {
 
-        this.repository.delete(s);
+        this.repository.delete(furniture);
+
     }
 }

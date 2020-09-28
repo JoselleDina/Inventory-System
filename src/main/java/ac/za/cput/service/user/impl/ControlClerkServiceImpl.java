@@ -4,7 +4,6 @@ package ac.za.cput.service.user.impl;
  * Description: Implementation for Control Clerk Service
  * Date: 05 September 2020
  */
-import ac.za.cput.entity.equipment.Device;
 import ac.za.cput.entity.user.ControlClerk;
 import ac.za.cput.repository.user.ControlClerkRepository;
 import ac.za.cput.repository.user.impl.ControlClerkRepositoryImpl;
@@ -50,8 +49,7 @@ public class ControlClerkServiceImpl implements ControlClerkService {
     }
 
     @Override
-    public Device delete(String clerkId) {
+    public void delete(String clerkId) {
         this.repository.delete(clerkId);
-        return null;
     }
 }
