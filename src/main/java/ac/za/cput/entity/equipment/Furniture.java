@@ -9,10 +9,11 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class Furniture implements Serializable {
+public class Furniture {
 
     @Id
     private String furnitureId;
+    private String name;
     private String furnitureTypeId;
 
     protected Furniture() {
@@ -21,10 +22,12 @@ public class Furniture implements Serializable {
     public Furniture(Builder builder){
         this.furnitureId = builder.furnitureId;
         this.furnitureTypeId = builder.furnitureTypeId;
+        this.name = builder.name;
     }
 
     public static class Builder {
         private String furnitureId;
+        private String name;
         private String furnitureTypeId;
 
 
@@ -32,6 +35,10 @@ public class Furniture implements Serializable {
             this.furnitureId = furnitureId;
             return this;
         }// Setter
+        public Builder setName(String name){
+            this.name = name;
+            return this;
+        }
 
         public Builder setFurnitureTypeId(String furnitureTypeId) {
             this.furnitureTypeId = furnitureTypeId;
@@ -40,6 +47,7 @@ public class Furniture implements Serializable {
 
         public Builder copy(Furniture furniture) {
             this.furnitureId = furniture.furnitureId;
+
             this.furnitureTypeId = furniture.furnitureTypeId;
             return this;
         }
@@ -51,6 +59,10 @@ public class Furniture implements Serializable {
     }
     public String getFurnitureId() {
         return furnitureId;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getFurnitureTypeId() {

@@ -5,14 +5,13 @@ import ac.za.cput.util.GenericHelper;
 
 public class FurnitureFactory {
 
-    public static Furniture createFurniture(String furnitureTypeId){
+    public static Furniture createFurniture(String furnitureTypeId,String name){
         String furnitureId = GenericHelper.generateId();
         Furniture furniture =new Furniture.Builder()
                 .setFurnitureId(furnitureId)
                 .setFurnitureTypeId(furnitureTypeId)
+                .setName(name)
                 .build();
         return furniture;
-
-
     }
 }

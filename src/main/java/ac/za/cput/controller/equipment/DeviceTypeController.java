@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/inventory/deviceType")
+@RequestMapping("/deviceType")
 public class DeviceTypeController {
 
     @Autowired

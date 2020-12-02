@@ -1,4 +1,5 @@
 package ac.za.cput.entity.equipment;
+
 import javax.management.relation.Role;
 import javax.persistence.*;
 
@@ -9,33 +10,38 @@ import java.util.Set;
 
 @Entity
 
-public class Device implements Serializable {
-   @Id
+public class Device {
+    @Id
     private String deviceId;
     private String deviceTypeId;
+    private String name;
 
 
+    protected Device() {
+    }
 
 
-
-protected Device(){}
-
-
-
-    public Device(Builder builder){
+    public Device(Builder builder) {
         this.deviceId = builder.deviceId;
         this.deviceTypeId = builder.deviceTypeId;
+        this.name = builder.name;
 
     }
 
     public static class Builder {
         private String deviceId;
         private String deviceTypeId;
+        private String name;
 
         public Builder setDeviceId(String deviceId) {
             this.deviceId = deviceId;
             return this;
         }// Setter
+
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
 
         public Builder setDeviceTypeId(String deviceTypeId) {
             this.deviceTypeId = deviceTypeId;
@@ -53,23 +59,28 @@ protected Device(){}
 
         }
     }
-        public String getDeviceId() {
-            return deviceId;
-        }
 
-        public String getDeviceTypeId() {
-            return deviceTypeId;
-        }
+    public String getName() {
+        return name;
+    }
 
-        @Override
-        public String toString() {
-            return "Device{" +
-                    "device_id=" + deviceId +
-                    ", device_type_id=" + deviceTypeId +
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    public String getDeviceTypeId() {
+        return deviceTypeId;
+    }
+
+    @Override
+    public String toString() {
+        return "Device{" +
+                "device_id=" + deviceId +
+                ", device_type_id=" + deviceTypeId +
 
 
-                    '}';
-        }
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
