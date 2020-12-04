@@ -14,4 +14,8 @@ public class FurnitureFactory {
                 .build();
         return furniture;
     }
+
+    public static Furniture createFurniture(String s) {
+        return null;
+    }
 }

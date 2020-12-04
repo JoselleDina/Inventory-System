@@ -17,4 +17,8 @@ public class DeviceFactory {
 
 
         }
+
+    public static Device createDevice(String s) {
+            return null;
+    }
 }
