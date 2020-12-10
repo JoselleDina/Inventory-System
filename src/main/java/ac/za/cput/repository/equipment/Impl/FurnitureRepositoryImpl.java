@@ -1,3 +1,8 @@
+/*
+ *@author @Emile Lubangi kitenge 216012465
+ *
+ */
+
 //package ac.za.cput.repository.equipment.Impl;
 //
 //import ac.za.cput.entity.equipment.Device;
