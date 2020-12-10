@@ -20,7 +20,7 @@ public class DeviceController {
 
     @PostMapping("/create")
     public Device create(@RequestBody Device device) {
-        Device device1 = DeviceFactory.createDevice(device.getDeviceTypeId());
+        Device device1 = DeviceFactory.createDevice(device.getDeviceTypeId(),device.getName());
 
         return deviceService.create(device1);
     }

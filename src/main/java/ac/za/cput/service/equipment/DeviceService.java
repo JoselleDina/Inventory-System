@@ -1,3 +1,7 @@
+/*
+ *@author @Emile Lubangi kitenge 216012465
+ *
+ */
 package ac.za.cput.service.equipment;
 
 import ac.za.cput.entity.equipment.Device;

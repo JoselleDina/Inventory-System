@@ -18,9 +18,8 @@ public class FurnitureController {
     private FurnitureServiceImpl furnitureService;
 
     @PostMapping("/create")
-
     public Furniture create(@RequestBody Furniture furniture) {
-        Furniture furniture1 = FurnitureFactory.createFurniture(furniture.getFurnitureTypeId());
+        Furniture furniture1 = FurnitureFactory.createFurniture(furniture.getFurnitureTypeId(),furniture.getName());
         return furnitureService.create(furniture1);
     }
     @DeleteMapping ("/delete/{furnitureId}")
