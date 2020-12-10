@@ -6,10 +6,9 @@
 package ac.za.cput.entity.equipment;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import ac.za.cput.entity.generic.Stock;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -20,6 +19,9 @@ public class Furniture {
     private String furnitureId;
     private String name;
     private String furnitureTypeId;
+
+    @OneToOne
+    private Stock stock;
 
     protected Furniture() {
     }

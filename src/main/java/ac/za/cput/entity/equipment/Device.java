@@ -16,12 +16,15 @@ public class Device {
     private String deviceTypeId;
     private String name;
 
+    @OneToOne
+    private Stock stock;
 
-    protected Device() {
-    }
+    protected Device(){}
 
 
-    public Device(Builder builder) {
+
+    public Device(Builder builder){
+
         this.deviceId = builder.deviceId;
         this.deviceTypeId = builder.deviceTypeId;
         this.name = builder.name;
